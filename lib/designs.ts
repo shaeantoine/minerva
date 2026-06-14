@@ -4,6 +4,7 @@ import { TerrainDesign } from "@/components/designs/terrain/TerrainDesign";
 import { ConstellationDesign } from "@/components/designs/constellation/ConstellationDesign";
 import { FieldGuideDesign } from "@/components/designs/field-guide/FieldGuideDesign";
 import { HerbariumDesign } from "@/components/designs/herbarium/HerbariumDesign";
+import { PlateDesign } from "@/components/designs/plate/PlateDesign";
 
 export type DesignMeta = {
   slug: string;
@@ -41,6 +42,15 @@ export const designs: DesignMeta[] = [
       "Each learner pressed for the record. Bone-white with botanical green, dusty rose, and gold leaf — a herbarium sheet of capability.",
     swatch: "#faf6ec",
     Component: HerbariumDesign,
+  },
+  {
+    slug: "plate",
+    name: "The Plate",
+    tradition: "Royal Folio · Theatrical",
+    pitch:
+      "A single dramatic engraved plate. Ivory and ink with deep cobalt watercolor — the Capability Bloom drawn ad vivum.",
+    swatch: "#faf5e8",
+    Component: PlateDesign,
   },
   {
     slug: "terrain",
