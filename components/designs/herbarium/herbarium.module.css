@@ -1,0 +1,466 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(45, 90, 61, 0.05), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(158, 103, 112, 0.06), transparent 55%),
+    #faf6ec;
+  color: #1c1c1c;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Charter", "Apple Garamond", "Palatino Linotype",
+    "Cambria", Georgia, ui-serif, serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code",
+    "Roboto Mono", "Courier New", monospace;
+  --bone: #faf6ec;
+  --bone-deep: #f1ebd9;
+  --ink: #1c1c1c;
+  --botanical: #2d5a3d;
+  --rose: #9e6770;
+  --gold: #b8941a;
+}
+
+.masthead {
+  border-bottom: 1px solid rgba(28, 28, 28, 0.18);
+}
+
+.mastheadInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.mastheadName {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.mastheadH4 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mastheadDivider {
+  color: rgba(28, 28, 28, 0.4);
+}
+
+.mastheadSub {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(28, 28, 28, 0.7);
+}
+
+.mastheadCoord {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 5rem 1.5rem 7rem;
+  }
+}
+
+.heroCopy {
+  max-width: 32rem;
+}
+
+.heroEyebrow {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1.5rem;
+  font-weight: 500;
+}
+
+.heroHeadline {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.heroHeadline em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.preserved {
+  font-style: italic;
+  color: var(--botanical);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 0.12em;
+}
+
+.heroLede {
+  margin: 1.75rem 0 0;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: rgba(28, 28, 28, 0.82);
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2.25rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.heroCta:hover {
+  color: var(--rose);
+  border-bottom-color: var(--rose);
+}
+
+.heroCtaArrow {
+  transition: transform 0.2s;
+}
+
+.heroCta:hover .heroCtaArrow {
+  transform: translateX(3px);
+}
+
+.heroLabel {
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 252, 244, 0.85);
+  border: 1px solid rgba(28, 28, 28, 0.5);
+  display: inline-block;
+  position: relative;
+}
+
+.heroLabel::before,
+.heroLabel::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border: 1px solid rgba(28, 28, 28, 0.6);
+  border-radius: 50%;
+}
+
+.heroLabel::before {
+  top: -3px;
+  left: -3px;
+}
+
+.heroLabel::after {
+  top: -3px;
+  right: -3px;
+}
+
+.heroLabelLatin {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--ink);
+}
+
+.heroLabelLatin em {
+  font-style: italic;
+}
+
+.heroLabelMeta {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: rgba(28, 28, 28, 0.6);
+  margin: 0.4rem 0 0;
+}
+
+.specimenWrap {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  aspect-ratio: 100 / 130;
+}
+
+.pressedSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.collection {
+  background: var(--bone-deep);
+  padding: 5rem 0;
+  border-top: 1px solid rgba(28, 28, 28, 0.18);
+  border-bottom: 1px solid rgba(28, 28, 28, 0.18);
+}
+
+.collectionInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.collectionKicker {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--gold);
+  margin: 0 0 0.85rem;
+}
+
+.sectionTitle {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.sectionSub {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: rgba(28, 28, 28, 0.72);
+  margin: 0 auto 4rem;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.sheetGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .sheetGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+.sheet {
+  position: relative;
+  padding: 2.5rem 1.75rem 2rem;
+  background: rgba(255, 252, 244, 0.85);
+  border: 1px solid rgba(28, 28, 28, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sheetCorner,
+.sheetCornerR {
+  position: absolute;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+}
+
+.sheetCorner {
+  left: 8px;
+  border-top: 1px solid rgba(28, 28, 28, 0.55);
+  border-left: 1px solid rgba(28, 28, 28, 0.55);
+}
+
+.sheetCornerR {
+  right: 8px;
+  border-top: 1px solid rgba(28, 28, 28, 0.55);
+  border-right: 1px solid rgba(28, 28, 28, 0.55);
+}
+
+.sheetIllustration {
+  width: 8rem;
+  height: 11rem;
+  margin: 0.5rem 0 1.25rem;
+  color: var(--ink);
+}
+
+.sheetIllustration svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sheetLabel {
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(28, 28, 28, 0.18);
+}
+
+.sheetBinomial {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  margin: 0 0 0.4rem;
+  color: var(--botanical);
+}
+
+.sheetBinomial em {
+  font-style: italic;
+}
+
+.sheetName {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+}
+
+.sheetBody {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(28, 28, 28, 0.85);
+  margin: 0 0 1.25rem;
+  text-align: left;
+}
+
+.sheetCollected {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin: auto 0 0;
+}
+
+.essay {
+  background: var(--bone);
+  padding: 5rem 1.5rem;
+}
+
+.essayInner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.essayKicker {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--gold);
+  margin: 0 0 0.85rem;
+}
+
+.essayTitle {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 0 0 3rem;
+  font-style: italic;
+}
+
+.essayPara {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  color: rgba(28, 28, 28, 0.92);
+  text-wrap: pretty;
+}
+
+.essayDropcap {
+  float: left;
+  font-family: var(--serif);
+  font-size: 4rem;
+  line-height: 0.85;
+  padding: 0.4rem 0.6rem 0 0;
+  font-weight: 400;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.colophon {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.colophonInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (min-width: 600px) {
+  .colophonInner {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.colophonName {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.colophonImprint {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(28, 28, 28, 0.7);
+  max-width: 26rem;
+}
+
+.colophonCta {
+  font-size: 0.9rem;
+  color: var(--botanical);
+  text-decoration: none;
+  border-bottom: 1px solid var(--botanical);
+  padding-bottom: 3px;
+}
+
+.colophonRule {
+  height: 1px;
+  background: rgba(28, 28, 28, 0.18);
+  margin: 2.5rem 0 1.5rem;
+}
+
+.colophonMeta {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  text-align: center;
+  color: rgba(28, 28, 28, 0.55);
+  margin: 0;
+}

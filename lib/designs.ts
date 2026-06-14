@@ -3,6 +3,7 @@ import { AtlasDesign } from "@/components/designs/atlas/AtlasDesign";
 import { TerrainDesign } from "@/components/designs/terrain/TerrainDesign";
 import { ConstellationDesign } from "@/components/designs/constellation/ConstellationDesign";
 import { FieldGuideDesign } from "@/components/designs/field-guide/FieldGuideDesign";
+import { HerbariumDesign } from "@/components/designs/herbarium/HerbariumDesign";
 
 export type DesignMeta = {
   slug: string;
@@ -31,6 +32,15 @@ export const designs: DesignMeta[] = [
       "Learners as specimens. Linen ivory with prussian blue, dusty rose, and sage — a working naturalist's record of how a student grows.",
     swatch: "#f4ede0",
     Component: FieldGuideDesign,
+  },
+  {
+    slug: "herbarium",
+    name: "Herbarium",
+    tradition: "Pressed specimen · Precious",
+    pitch:
+      "Each learner pressed for the record. Bone-white with botanical green, dusty rose, and gold leaf — a herbarium sheet of capability.",
+    swatch: "#faf6ec",
+    Component: HerbariumDesign,
   },
   {
     slug: "terrain",
