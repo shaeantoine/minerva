@@ -1,0 +1,362 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(180, 95, 60, 0.06), transparent 60%),
+    radial-gradient(ellipse at 100% 100%, rgba(38, 50, 80, 0.05), transparent 60%),
+    #efe6d2;
+  color: #263250;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Charter", "Apple Garamond", "Palatino Linotype",
+    "Cambria", Georgia, ui-serif, serif;
+  --ink: #263250;
+  --terracotta: #b45f3c;
+  --parchment: #efe6d2;
+  --parchment-dark: #e3d6b8;
+}
+
+.masthead {
+  border-bottom: 1px solid rgba(38, 50, 80, 0.18);
+}
+
+.mastheadInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.mastheadName {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.mastheadH4 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.mastheadDivider {
+  color: rgba(38, 50, 80, 0.4);
+}
+
+.mastheadSub {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  font-style: italic;
+  color: rgba(38, 50, 80, 0.65);
+}
+
+.mastheadCoord {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(38, 50, 80, 0.55);
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1.05fr;
+    gap: 4rem;
+    padding: 5rem 1.5rem 7rem;
+  }
+}
+
+.heroCopy {
+  max-width: 30rem;
+}
+
+.heroEyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 0 0 1.5rem;
+  font-weight: 500;
+}
+
+.heroHeadline {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin: 0;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.heroHeadline em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.thrive {
+  font-style: italic;
+  color: var(--terracotta);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1em;
+}
+
+.heroLede {
+  margin: 1.75rem 0 0;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: rgba(38, 50, 80, 0.82);
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2.25rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.heroCta:hover {
+  color: var(--terracotta);
+  border-bottom-color: var(--terracotta);
+}
+
+.heroCtaArrow {
+  transition: transform 0.2s;
+}
+
+.heroCta:hover .heroCtaArrow {
+  transform: translateX(3px);
+}
+
+.mapWrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  aspect-ratio: 100 / 90;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--ink);
+}
+
+.pillars {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.pillarRule {
+  height: 1px;
+  background: rgba(38, 50, 80, 0.18);
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.sectionSub {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: rgba(38, 50, 80, 0.7);
+  margin: 0 0 3rem;
+  max-width: 36rem;
+}
+
+.pillarGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .pillarGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar {
+  position: relative;
+  padding: 2rem 1.75rem 6rem;
+  background: rgba(255, 250, 235, 0.55);
+  border: 1px solid rgba(38, 50, 80, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pillarHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 1rem;
+}
+
+.pillarBearing {
+  color: rgba(38, 50, 80, 0.55);
+}
+
+.pillarLabel {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+}
+
+.pillarBody {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(38, 50, 80, 0.82);
+  margin: 0;
+}
+
+.pillarTopo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.pillarTopo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.essay {
+  background: var(--parchment-dark);
+  padding: 5rem 1.5rem;
+  border-top: 1px solid rgba(38, 50, 80, 0.15);
+  border-bottom: 1px solid rgba(38, 50, 80, 0.15);
+}
+
+.essayInner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.essayTitle {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 0 0 3rem;
+  font-style: italic;
+}
+
+.essayPara {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 80, 0.92);
+  text-wrap: pretty;
+}
+
+.essayDropcap {
+  float: left;
+  font-family: var(--serif);
+  font-size: 4rem;
+  line-height: 0.85;
+  padding: 0.4rem 0.6rem 0 0;
+  font-weight: 400;
+  color: var(--terracotta);
+  font-style: italic;
+}
+
+.colophon {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.colophonInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (min-width: 600px) {
+  .colophonInner {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.colophonName {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.colophonImprint {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(38, 50, 80, 0.7);
+  max-width: 24rem;
+}
+
+.colophonCta {
+  font-size: 0.9rem;
+  color: var(--terracotta);
+  text-decoration: none;
+  border-bottom: 1px solid var(--terracotta);
+  padding-bottom: 3px;
+}
+
+.colophonRule {
+  height: 1px;
+  background: rgba(38, 50, 80, 0.2);
+  margin: 2.5rem 0 1.5rem;
+}
+
+.colophonMeta {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(38, 50, 80, 0.5);
+  margin: 0;
+}

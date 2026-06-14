@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { ManifestoDesign } from "@/components/designs/manifesto/ManifestoDesign";
 import { InstrumentDesign } from "@/components/designs/instrument/InstrumentDesign";
+import { AtlasDesign } from "@/components/designs/atlas/AtlasDesign";
 
 export type DesignMeta = {
   slug: string;
@@ -29,6 +30,15 @@ export const designs: DesignMeta[] = [
       "H4 demonstrates itself. Dark UI, electric accents, a learner model breathing in the hero.",
     swatch: "#0a0e1a",
     Component: InstrumentDesign,
+  },
+  {
+    slug: "atlas",
+    name: "Atlas",
+    tradition: "Cartographic · Aspirational",
+    pitch:
+      "Opportunity as territory. Parchment and ink-blue, a map of where students might thrive.",
+    swatch: "#e8dcc4",
+    Component: AtlasDesign,
   },
 ];
 
