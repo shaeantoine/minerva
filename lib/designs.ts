@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { AtlasDesign } from "@/components/designs/atlas/AtlasDesign";
 import { TerrainDesign } from "@/components/designs/terrain/TerrainDesign";
+import { ConstellationDesign } from "@/components/designs/constellation/ConstellationDesign";
 
 export type DesignMeta = {
   slug: string;
@@ -29,6 +30,15 @@ export const designs: DesignMeta[] = [
       "Mastery as elevation. Sage and forest-green with deep teal contour lines, a topographic survey of how deep a learner goes.",
     swatch: "#e8eee5",
     Component: TerrainDesign,
+  },
+  {
+    slug: "constellation",
+    name: "Constellation",
+    tradition: "Celestial · Mythopoetic",
+    pitch:
+      "Capability as constellation. Midnight indigo and pale gold, a star chart of what every learner steers by.",
+    swatch: "#0d1330",
+    Component: ConstellationDesign,
   },
 ];
 
