@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { AtlasDesign } from "@/components/designs/atlas/AtlasDesign";
+import { TerrainDesign } from "@/components/designs/terrain/TerrainDesign";
 
 export type DesignMeta = {
   slug: string;
@@ -19,6 +20,15 @@ export const designs: DesignMeta[] = [
       "Opportunity as territory. Parchment and ink-blue, a map of where students might thrive.",
     swatch: "#e8dcc4",
     Component: AtlasDesign,
+  },
+  {
+    slug: "terrain",
+    name: "Terrain",
+    tradition: "Topographic · Surveyed",
+    pitch:
+      "Mastery as elevation. Sage and forest-green with deep teal contour lines, a topographic survey of how deep a learner goes.",
+    swatch: "#e8eee5",
+    Component: TerrainDesign,
   },
 ];
 
